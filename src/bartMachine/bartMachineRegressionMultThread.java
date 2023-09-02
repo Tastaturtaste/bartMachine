@@ -300,7 +300,7 @@ public class bartMachineRegressionMultThread extends Classifier implements Seria
 	 * @param num_cores_evaluate	The number of CPU cores to use during evaluation	
 	 * @return						Predictions for all records further indexed by Gibbs sample
 	 */
-	protected double[][] getGibbsSamplesForPrediction(final double[][] records, final int num_cores_evaluate){
+	public double[][] getGibbsSamplesForPrediction(final double[][] records, final int num_cores_evaluate){
 		final int num_samples_after_burn_in = numSamplesAfterBurning();
 		final bartMachineRegression first_bart = bart_gibbs_chain_threads[0];
 		

@@ -47,7 +47,7 @@ public class bartMachineClassificationMultThread extends bartMachineRegressionMu
 	 *  @param num_cores_evaluate	The number of CPU cores to use during this operation
 	 *  @return						The predictions as a vector of size number of posterior samples of vectors of size number of trees
 	 */
-	protected double[][] getGibbsSamplesForPrediction(double[][] data, int num_cores_evaluate){
+	public double[][] getGibbsSamplesForPrediction(double[][] data, int num_cores_evaluate){
 		double[][] y_gibbs_samples = super.getGibbsSamplesForPrediction(data, num_cores_evaluate);
 		double[][] y_gibbs_samples_probs = new double[y_gibbs_samples.length][y_gibbs_samples[0].length];
 		for (int g = 0; g < y_gibbs_samples.length; g++){
